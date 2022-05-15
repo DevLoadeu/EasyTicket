@@ -18,6 +18,7 @@ from discord_slash.model import ButtonStyle
 bot = commands.Bot(command_prefix="+", intents=discord.Intents.all(), help_command=None)
 slash = SlashCommand(bot, sync_commands=True, sync_on_cog_reload=True)
 load_dotenv()
+print("[INFO] .env File geladen")
 
 
 # ----------------------------------------------------------------------------------------------------------------------
