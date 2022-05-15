@@ -1,7 +1,7 @@
 import asyncio
 import datetime
 import time
-
+from dotenv import load_dotenv
 import aiomysql
 import chat_exporter
 import discord
@@ -17,6 +17,7 @@ from discord_slash.model import ButtonStyle
 
 bot = commands.Bot(command_prefix="+", intents=discord.Intents.all(), help_command=None)
 slash = SlashCommand(bot, sync_commands=True, sync_on_cog_reload=True)
+load_dotenv()
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -126,7 +127,7 @@ async def vote_reminder_check():
 # ----------------------------------------------------------------------------------------------------------------------
 
 
-bot.run("OTM0ODE3NDAzOTkxMzYzNjQ1.Ye1mjQ.Y7bM_sDvK1Pryz1UMQ9EFgTp-Hw") # EasyTicket
+bot.run(os.getenv("TOKEN")) # EasyTicket
 
 
 # ----------------------------------------------------------------------------------------------------------------------
