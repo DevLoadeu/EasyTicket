@@ -36,7 +36,7 @@ for filename in os.listdir('./cogs'):
 loop = bot.loop
 bot.pool = loop.run_until_complete(
     aiomysql.create_pool(
-        host="45.155.76.193", port=3306, user="EasyTicket", password="EasyTicket2022$", db='EasyTicket',
+        host="", port=3306, user="", password="", db='EasyTicket'
         loop=loop, autocommit=True, maxsize=25)
 )
 
