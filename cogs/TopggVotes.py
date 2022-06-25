@@ -13,10 +13,10 @@ import dbl
 class TopggVotes(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzNDgxNzQwMzk5MTM2MzY0NSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjQ0MDczNzg3fQ.ravbmvoUL-s6qKRAidFskCNn_Otqs29hfr-GkBavgpc"
+        self.token = ""
         self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True, webhook_path="/dblwebhook",
-                                   webhook_auth="DasIstEasyTicket1234!",
-                                   webhook_port=2223)
+                                   webhook_auth="",
+                                   webhook_port=)
 
     @commands.Cog.listener()
     async def on_dbl_vote(self, data):
